@@ -1,0 +1,570 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f3ef;
+    color: #171717;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================
+   GENERALE
+========================= */
+
+.container {
+    width: min(1180px, 90%);
+    margin: 0 auto;
+}
+
+.section {
+    padding: 120px 0;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.section-heading {
+    max-width: 650px;
+    margin-bottom: 60px;
+}
+
+.section-heading h2 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 0.98;
+    letter-spacing: -3px;
+    margin-bottom: 25px;
+}
+
+.section-heading p:last-child {
+    max-width: 550px;
+    color: #666;
+    font-size: 17px;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(245, 243, 239, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #ddd9d2;
+}
+
+.nav-container {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    font-weight: 400;
+    margin-left: 4px;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    font-size: 14px;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+nav a:hover {
+    opacity: 0.5;
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: clamp(55px, 8vw, 105px);
+    line-height: 0.9;
+    letter-spacing: -6px;
+    margin-bottom: 35px;
+}
+
+.hero-text h1 span {
+    color: #777;
+}
+
+.hero-description {
+    max-width: 520px;
+    color: #666;
+    font-size: 19px;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 25px;
+    font-weight: 700;
+    font-size: 14px;
+    border: 1px solid #171717;
+    transition: 0.25s;
+}
+
+.btn-primary {
+    background: #171717;
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background: transparent;
+}
+
+.btn-secondary:hover {
+    background: #171717;
+    color: white;
+}
+
+
+/* =========================
+   PLACEHOLDER IMAGES
+========================= */
+
+.image-placeholder {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #dedbd5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.image-placeholder span {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.image-placeholder small {
+    margin-top: 8px;
+    color: #777;
+}
+
+
+/* =========================
+   SERVIZI
+========================= */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    position: relative;
+    padding: 35px 25px;
+    min-height: 330px;
+    background: #ebe8e2;
+    border: 1px solid #ddd9d2;
+    transition: transform 0.25s;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+}
+
+.service-number {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.service-icon {
+    font-size: 35px;
+    margin: 50px 0 20px;
+}
+
+.service-card h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* =========================
+   PORTFOLIO
+========================= */
+
+.section-dark {
+    background: #171717;
+    color: white;
+}
+
+.section-heading-light p:last-child {
+    color: #aaa;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+.portfolio-item {
+    overflow: hidden;
+}
+
+.portfolio-image {
+    aspect-ratio: 4 / 3;
+    background: #303030;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 13px;
+    letter-spacing: 2px;
+    transition: transform 0.4s;
+}
+
+.portfolio-item:hover .portfolio-image {
+    transform: scale(1.02);
+}
+
+.portfolio-info {
+    padding-top: 18px;
+}
+
+.portfolio-info span {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #999;
+}
+
+.portfolio-info h3 {
+    margin-top: 5px;
+    font-size: 22px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 0.95;
+    letter-spacing: -3px;
+    margin-bottom: 30px;
+}
+
+.about-text h2 span {
+    color: #777;
+}
+
+.about-text p {
+    color: #666;
+    max-width: 550px;
+    margin-bottom: 20px;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: 700;
+    border-bottom: 1px solid #171717;
+    padding-bottom: 5px;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    background: #dedbd5;
+    padding: 120px 0;
+}
+
+.cta-content {
+    max-width: 750px;
+}
+
+.cta h2 {
+    font-size: clamp(50px, 7vw, 90px);
+    line-height: 0.9;
+    letter-spacing: -4px;
+    margin-bottom: 30px;
+}
+
+.cta p:not(.eyebrow) {
+    max-width: 550px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   CONTATTI
+========================= */
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-card {
+    padding: 25px;
+    border: 1px solid #d5d1ca;
+    display: flex;
+    flex-direction: column;
+    transition: 0.25s;
+}
+
+.contact-card:hover {
+    background: #171717;
+    color: white;
+    transform: translateX(5px);
+}
+
+.contact-card span {
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 7px;
+    opacity: 0.6;
+}
+
+.contact-card strong {
+    font-size: 18px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #171717;
+    color: white;
+    padding: 60px 0 25px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-content p {
+    color: #888;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.footer-right {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-right a {
+    font-size: 13px;
+    color: #aaa;
+}
+
+.footer-right a:hover {
+    color: white;
+}
+
+.copyright {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    color: #666;
+    font-size: 12px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-content,
+    .about,
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 70px 0;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .about {
+        gap: 50px;
+    }
+
+    .contact {
+        gap: 50px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .nav-container {
+        height: 70px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #f5f3ef;
+        flex-direction: column;
+        gap: 0;
+        border-bottom: 1px solid #ddd9d2;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        padding: 18px 5%;
+        border-top: 1px solid #ddd9d2;
+    }
+
+    .hero-text h1 {
+        font-size: 58px;
+        letter-spacing: -4px;
+    }
+
+    .services-grid,
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-right {
+        flex-wrap: wrap;
+    }
+
+}
